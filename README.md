@@ -26,3 +26,4 @@ thousands clients, hundreds psychiatrist
 1) ```cd docker``` 
 1) ```docker composer up -d```
 1) ```docker exec -ti app php artisan migrate```
+1) ```docker exec -ti app php artisan db:seed```
