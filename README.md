@@ -1,4 +1,4 @@
-# Juranling app: "NAMI"
+# Journaling service: "NAMI"
 
 This is kata. Orginal description was this:
 
@@ -19,3 +19,10 @@ thousands clients, hundreds psychiatrist
 * In near future we plan to sell this services for business clients as internal mental health/team improvement self-hosted tool
 * We plan to add task tracker/management for habit formation
 
+### Requirements
+* [docker compose](https://docs.docker.com/compose/install/)
+
+### Setup
+1) ```cd docker``` 
+1) ```docker composer up -d```
+1) ```docker exec -ti app php artisan migrate```
