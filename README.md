@@ -1,5 +1,16 @@
 # Journaling service: "NAMI"
 
+### Requirements
+* [docker compose](https://docs.docker.com/compose/install/)
+
+### Setup
+1) ```cd docker```
+1) ```docker composer up -d```
+1) ```docker exec -ti app php artisan migrate```
+1) ```docker exec -ti app php artisan db:seed```
+1) visit [localhost at 8000](http://localhost:8000/)
+
+## Idea description 
 This is kata. Orginal description was this:
 
 A SaaS for journaling. Clients get journaling platform and questions/Topics. On the side we push psychiatrist to use this tool
@@ -18,12 +29,3 @@ thousands clients, hundreds psychiatrist
 * We expect fast growth of client base
 * In near future we plan to sell this services for business clients as internal mental health/team improvement self-hosted tool
 * We plan to add task tracker/management for habit formation
-
-### Requirements
-* [docker compose](https://docs.docker.com/compose/install/)
-
-### Setup
-1) ```cd docker``` 
-1) ```docker composer up -d```
-1) ```docker exec -ti app php artisan migrate```
-1) ```docker exec -ti app php artisan db:seed```
