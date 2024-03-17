@@ -13,6 +13,9 @@ class QuestionsSeeder extends Seeder
      */
     public function run(): void
     {
+        Question::query()->delete();
+        QuestionsList::query()->delete();
+
         $questionLists = $this->getQuestionsLists();
 
         foreach ($questionLists as $questionListData) {

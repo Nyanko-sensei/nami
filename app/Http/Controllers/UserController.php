@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Services\Scheduler\QuestionsSchedulerInterface;
-use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -14,10 +13,8 @@ class UserController extends Controller
     {
     }
 
-    public function schedule()
+    public function schedule(User $user)
     {
-        /** @var User $user */
-        $user = Auth::user();
         $this->scheduler->schedule($user);
         return response('ok');
     }
