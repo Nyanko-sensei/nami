@@ -8,7 +8,7 @@ use App\Services\Scheduler\QuestionsSchedulerInterface;
 class UserController extends Controller
 {
     public function __construct(
-        readonly private QuestionsSchedulerInterface $scheduler
+        private readonly QuestionsSchedulerInterface $scheduler
     )
     {
     }
