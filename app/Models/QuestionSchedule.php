@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class QuestionSchedule extends Model
 {
@@ -19,4 +20,9 @@ class QuestionSchedule extends Model
     protected $casts = [
         'date_time_to_ask' => 'date',
     ];
+
+    public function question(): BelongsTo
+    {
+        return $this->belongsTo(Question::class);
+    }
 }
