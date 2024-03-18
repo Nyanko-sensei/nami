@@ -10,5 +10,5 @@ Route::get('/', function () {
 Route::prefix('/user/{user}')->group(function() {
     Route::get('/schedule', [UserController::class, 'schedule']);
     Route::get('/questions/today', [UserController::class, 'getTodayQuestions']);
-    Route::post('/questions/{question}/answer', [UserController::class, 'saveAnswer']);
+    Route::post('/questions/{scheduleQuestion}/answer', [UserController::class, 'saveAnswer']);
 });

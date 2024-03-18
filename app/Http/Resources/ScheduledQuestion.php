@@ -15,6 +15,7 @@ class ScheduledQuestion extends JsonResource
     public function toArray(Request $request): array
     {
         return [
+            'id' => $this->id,
             'dateTimeToAsk' => $this->date_time_to_ask,
             'question' => new Question($this->question)
         ];
